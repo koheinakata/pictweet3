@@ -1,0 +1,36 @@
+<!-- form・・・ユーザーが情報を入力しサーバーに情報を送信するためのもの。HTMLのコードの中にform要素を作成し、その中にフォームを構成する部品のinput要素やtextarea要素を配置することで作成することができます。 -->
+
+<div class="contents row">
+  <div class="container">
+    <%= form_tag('/tweets', method: :post) do %> <!-- /tweetsテーブルへフォームに入力されたデータを送信。/tweetsはtweetsコントローラーのcreateメソッドへルーティングされている-->
+      <h3>
+        投稿する
+      </h3>
+      <input placeholder="name" type="text" name="name">
+      <input placeholder="Image Url" type="text" name="image">
+      <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
+      <input type="submit" value="SENT">
+    <% end %>
+  </div>
+</div>
+
+
+<!-- <form action = "/test" method="post">
+  <h3>サンプルフォーム</h3>
+  <div>
+    <label>Name</label>
+    <input Placeholder = "name" type="text" id="name">
+  </div>
+    <div>
+    <label>Email</label>
+    <input Placeholder = "email" type="text" id="email">
+  </div>
+    <div>
+    <label>Message</label>
+    <textarea Placeholder = "message" type="text" id="message">
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+
+</form> -->
